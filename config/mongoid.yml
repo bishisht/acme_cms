@@ -1,0 +1,28 @@
+development:
+  sessions:
+    default:
+      database: acme_cms_development
+      hosts:
+        - localhost:12345
+  options:
+    identity_map_enabled: true
+
+test:
+  sessions:
+    default:
+      database: acme_cms_test
+      hosts:
+        - localhost:12345
+  options:
+    identity_map_enabled: true
+
+production:
+  sessions:
+    default:
+      database: acme_cms_production
+      # heroku
+      # uri: <%= ENV['MONGOHQ_URL'] %>
+      hosts:
+        - localhost:12345
+  options:
+    identity_map_enabled: true
